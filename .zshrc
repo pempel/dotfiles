@@ -1,5 +1,9 @@
 neofetch
 
+# If a new command line being added to the history list duplicates an older one,
+# the older command is removed from the list
+setopt HIST_IGNORE_ALL_DUPS
+
 # Enable command completion
 autoload -U compinit && compinit
 
