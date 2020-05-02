@@ -5,7 +5,14 @@ neofetch
 setopt HIST_IGNORE_ALL_DUPS
 
 # Enable command completion
-autoload -U compinit && compinit
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu yes select
+
+# Enable vi mode
+bindkey -v
+bindkey '^?' backward-delete-char
+export KEYTIMEOUT=1
 
 # Set a custom prompt
 fpath+=~/.zsh/pure
