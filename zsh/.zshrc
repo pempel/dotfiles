@@ -1,4 +1,5 @@
-neofetch
+clear
+cowsay -f moose -p 'Happy coding!'
 
 # If a new command line being added to the history list duplicates an older one,
 # the older command is removed from the list
@@ -8,6 +9,12 @@ setopt HIST_IGNORE_ALL_DUPS
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu yes select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Enable vi mode
 bindkey -v
@@ -31,9 +38,9 @@ alias v='vim'
 alias g='git'
 alias ls='exa -al --color=always --group-directories-first --classify'
 alias mkdir='mkdir -pv'
-alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-source ~/.fzf.zsh
+# fzf bindings & completions
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Fish-like syntax highlighting for zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
