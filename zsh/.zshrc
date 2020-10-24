@@ -1,5 +1,9 @@
+not_in_tmux() {
+  [ -z "${TMUX}" ]
+}
+
 clear
-cowsay -f moose -p 'Happy coding!'
+not_in_tmux && cowsay -f moose -p 'Happy coding!'
 
 # If a new command line being added to the history list duplicates an older one,
 # the older command is removed from the list
@@ -33,11 +37,12 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 alias ..='cd ..'
 alias ...='cd ../..'
-alias c='clear'
-alias v='vim'
-alias g='git'
-alias ls='exa -al --color=always --group-directories-first --classify'
 alias mkdir='mkdir -pv'
+alias c='clear'
+alias g='git'
+alias v='vim'
+alias t='tmux'
+alias ls='exa -al --color=always --group-directories-first --classify'
 
 # fzf bindings & completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
