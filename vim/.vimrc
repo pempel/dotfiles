@@ -12,6 +12,7 @@ call minpac#add('challenger-deep-theme/vim', {'name': 'challenger-deep-theme'})
 call minpac#add('mhinz/vim-startify')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('junegunn/fzf.vim')
+call minpac#add('bfontaine/Brewfile.vim')
 call minpac#add('elixir-editors/vim-elixir')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
@@ -80,6 +81,9 @@ set number relativenumber
 
 " Automatically rebalance windows on Vim resize
 autocmd VimResized * wincmd =
+
+" Reload the .vimrc file without closing vim
+nnoremap <Leader>r :source ~/.vimrc<CR>
 
 " Set colors
 syntax on
