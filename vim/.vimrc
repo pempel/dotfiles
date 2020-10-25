@@ -14,6 +14,8 @@ call minpac#add('itchyny/lightline.vim')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('bfontaine/Brewfile.vim')
 call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
+call minpac#add('preservim/nerdtree')
+call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('elixir-editors/vim-elixir')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
@@ -36,10 +38,15 @@ let g:lightline = {
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Rg<CR>
-nnoremap <C-h> :History:<CR>
 
 " Configure markdown-preview
 nnoremap <C-m> :call mkdp#util#toggle_preview()<CR>
+
+" Configure nerdtree
+let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinSize = 40
+let g:NERDTreeShowHidden = 1
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 " Enable file type detection
 filetype plugin on
@@ -64,6 +71,11 @@ set splitright
 
 " Make the new window appear below the current window
 set splitbelow
+
+nnoremap <silent> <C-h> :wincmd h<CR>
+nnoremap <silent> <C-j> :wincmd j<CR>
+nnoremap <silent> <C-k> :wincmd k<CR>
+nnoremap <silent> <C-l> :wincmd l<CR>
 
 " Ignore case when searching
 set ignorecase
@@ -94,7 +106,7 @@ syntax on
 colorscheme challenger_deep
 set termguicolors
 
-" Set proper tabs
+" Set tabs
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
