@@ -13,6 +13,7 @@ call minpac#add('mhinz/vim-startify')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('bfontaine/Brewfile.vim')
+call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
 call minpac#add('elixir-editors/vim-elixir')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
@@ -36,6 +37,9 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Rg<CR>
 nnoremap <C-h> :History:<CR>
+
+" Configure markdown-preview
+nnoremap <C-m> :call mkdp#util#toggle_preview()<CR>
 
 " Enable file type detection
 filetype plugin on
