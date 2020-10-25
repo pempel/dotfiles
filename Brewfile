@@ -20,5 +20,5 @@ brew "vim"
 brew "yarn"
 
 cask "alacritty"
-cask "font-fira-code"
+cask "font-fira-code-nerd-font"
 
