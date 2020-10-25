@@ -17,6 +17,7 @@ brew "skhd", restart_service: true
 brew "stow"
 brew "tmux"
 brew "vim"
+brew "yarn"
 
 cask "alacritty"
 cask "font-fira-code"
