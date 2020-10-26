@@ -8,7 +8,7 @@ window:
     y: 5
 
 font:
-  size: 13.0
+  size: 14
 
   normal:
     family: FiraCode Nerd Font
@@ -25,12 +25,10 @@ font:
 # Challenger Deep Theme
 # https://github.com/challenger-deep-theme/alacritty
 colors:
-  # Default colors
   primary:
     background: '0x1b182c'
     foreground: '0xcbe3e7'
 
-  # Normal colors
   normal:
     black:   '0x100e23'
     red:     '0xff8080'
@@ -41,7 +39,6 @@ colors:
     cyan:    '0xaaffe4'
     white:   '0xcbe3e7'
 
-  # Bright colors
   bright:
     black:   '0x565575'
     red:     '0xff5458'
