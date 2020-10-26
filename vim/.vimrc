@@ -8,6 +8,7 @@ let mapleader=","
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('challenger-deep-theme/vim', {'name': 'challenger-deep-theme'})
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('mhinz/vim-startify')
@@ -71,11 +72,6 @@ set splitright
 
 " Make the new window appear below the current window
 set splitbelow
-
-nnoremap <silent> <C-h> :wincmd h<CR>
-nnoremap <silent> <C-j> :wincmd j<CR>
-nnoremap <silent> <C-k> :wincmd k<CR>
-nnoremap <silent> <C-l> :wincmd l<CR>
 
 " Ignore case when searching
 set ignorecase
