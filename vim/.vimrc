@@ -18,6 +18,7 @@ call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('preservim/nerdtree')
 call minpac#add('preservim/nerdcommenter')
+call minpac#add('w0rp/ale')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
 
@@ -52,6 +53,10 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " Configure nerdcommenter
 let g:NERDSpaceDelims = 1
 map <C-c> <Plug>NERDCommenterToggle
+
+" Configure ale
+let g:ale_sign_error = '🔥'
+let g:ale_sign_warning = '🔥'
 
 " Enable file type detection
 filetype plugin on
@@ -93,7 +98,7 @@ nnoremap <silent> <Leader><Space> :noh<CR>
 set laststatus=2
 
 " Show line numbers
-set number relativenumber
+set number
 
 " Automatically rebalance windows on Vim resize
 autocmd VimResized * wincmd =
