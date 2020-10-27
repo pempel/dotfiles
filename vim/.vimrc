@@ -8,15 +8,16 @@ let mapleader=","
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('challenger-deep-theme/vim', {'name': 'challenger-deep-theme'})
+call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('sheerun/vim-polyglot')
+call minpac#add('bfontaine/Brewfile.vim')
 call minpac#add('mhinz/vim-startify')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('junegunn/fzf.vim')
-call minpac#add('bfontaine/Brewfile.vim')
 call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
 call minpac#add('preservim/nerdtree')
+call minpac#add('preservim/nerdcommenter')
 call minpac#add('ryanoasis/vim-devicons')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
@@ -48,6 +49,10 @@ let g:NERDTreeWinPos = 'right'
 let g:NERDTreeWinSize = 40
 let g:NERDTreeShowHidden = 1
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+" Configure nerdcommenter
+let g:NERDSpaceDelims = 1
+map <C-c> <Plug>NERDCommenterToggle
 
 " Enable file type detection
 filetype plugin on
