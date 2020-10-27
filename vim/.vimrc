@@ -57,6 +57,8 @@ map <C-c> <Plug>NERDCommenterToggle
 " Configure ale
 let g:ale_sign_error = '🔥'
 let g:ale_sign_warning = '🔥'
+let g:ale_fixers = {'javascript': ['prettier']}
+let g:ale_fix_on_save = 1
 
 " Enable file type detection
 filetype plugin on
