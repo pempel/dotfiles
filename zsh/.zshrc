@@ -30,7 +30,6 @@ export PATH="./node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$P
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export FZF_DEFAULT_COMMAND="rg --files --ignore --hidden -g '!.git/'"
-export NVM_DIR="$HOME/.nvm"
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -51,8 +50,14 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
 
-# Load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# Lazy load nvm
+nvm() {
+  echo 'Loading nvm...'
+  unset -f nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
 
 # Load extra configuration
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh
