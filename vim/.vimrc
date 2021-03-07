@@ -94,7 +94,7 @@ set incsearch
 set hlsearch
 
 " Clear last search highlighting
-nnoremap <silent> <Leader><Space> :noh<CR>
+nnoremap <silent> <Esc><Esc> :noh<CR>
 
 " Show the status line always
 set laststatus=2
