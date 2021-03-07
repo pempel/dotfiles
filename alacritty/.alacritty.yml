@@ -1,23 +1,21 @@
 window:
   decorations: buttonless
-
   startup_mode: Maximized
-
   padding:
     x: 5
     y: 5
 
+scrolling:
+  history: 10000
+
 font:
   size: 18
-
   normal:
     family: FiraCode Nerd Font
     style: Regular
-
   bold:
     family: FiraCode Nerd Font
     style: Bold
-
   italic:
     family: FiraCode Nerd Font
     style: Italic
@@ -28,7 +26,6 @@ colors:
   primary:
     background: '0x1b182c'
     foreground: '0xcbe3e7'
-
   normal:
     black:   '0x100e23'
     red:     '0xff8080'
@@ -38,7 +35,6 @@ colors:
     magenta: '0xc991e1'
     cyan:    '0xaaffe4'
     white:   '0xcbe3e7'
-
   bright:
     black:   '0x565575'
     red:     '0xff5458'
