@@ -8,7 +8,7 @@ scrolling:
   history: 10000
 
 font:
-  size: 18
+  size: 22
   normal:
     family: FiraCode Nerd Font
     style: Regular
