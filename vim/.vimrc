@@ -4,6 +4,9 @@ set nocompatible
 " Set a custom leader key
 let mapleader=","
 
+" Reload the .vimrc file without closing vim
+nnoremap <Leader>r :source ~/.vimrc<CR>
+
 " Load packages
 packadd minpac
 call minpac#init()
@@ -40,6 +43,12 @@ let g:lightline = {
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Rg<CR>
+" Overwrite the :Files command
+command! -bang -nargs=? -complete=dir Files
+\ call fzf#vim#files(<q-args>, <bang>0)
+" Overwrite the :Rg command
+command! -bang -nargs=* Rg
+\ call fzf#vim#grep('rg --glob "!*.lock" --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Configure markdown-preview
 nnoremap <C-m> :call mkdp#util#toggle_preview()<CR>
@@ -104,9 +113,6 @@ set number
 
 " Automatically rebalance windows on Vim resize
 autocmd VimResized * wincmd =
-
-" Reload the .vimrc file without closing vim
-nnoremap <Leader>r :source ~/.vimrc<CR>
 
 " Set colors
 syntax on
