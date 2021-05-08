@@ -50,15 +50,9 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
 
-# Lazy load nvm
-nvm() {
-  echo 'Loading nvm...'
-  unset -f nvm
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
-}
+# Load nvm
+export PATH="$HOME/.nvm/versions/node/v14.16.1/bin:$PATH"
+[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh --no-use
 
 # Load extra configuration
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh
-
