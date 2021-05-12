@@ -21,7 +21,6 @@ call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('preservim/nerdtree')
 call minpac#add('preservim/nerdcommenter')
-call minpac#add('w0rp/ale')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
 
@@ -62,12 +61,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " Configure nerdcommenter
 let g:NERDSpaceDelims = 1
 map <C-c> <Plug>NERDCommenterToggle
-
-" Configure ale
-let g:ale_sign_error = '🔥'
-let g:ale_sign_warning = '🔥'
-let g:ale_fixers = {'javascript': ['prettier']}
-let g:ale_fix_on_save = 1
 
 " Enable file type detection
 filetype plugin on
