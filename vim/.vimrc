@@ -17,7 +17,6 @@ call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('mhinz/vim-startify')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('junegunn/fzf.vim')
-call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('preservim/nerdtree')
 call minpac#add('preservim/nerdcommenter')
@@ -48,9 +47,6 @@ command! -bang -nargs=? -complete=dir Files
 " Overwrite the :Rg command
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep('rg --glob "!*.lock" --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
-
-" Configure markdown-preview
-nnoremap <C-m> :call mkdp#util#toggle_preview()<CR>
 
 " Configure nerdtree
 let g:NERDTreeWinPos = 'right'
