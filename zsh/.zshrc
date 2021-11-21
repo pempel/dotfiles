@@ -26,7 +26,7 @@ fpath+=~/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 
-export PATH="./node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="./node_modules/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export FZF_DEFAULT_COMMAND="rg --files --ignore --hidden -g '!.git/'"
