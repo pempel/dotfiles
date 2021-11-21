@@ -26,10 +26,15 @@ bindkey -v
 bindkey '^?' backward-delete-char
 export KEYTIMEOUT=1
 
-# Set a custom prompt
-fpath+=~/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+# Set Pure as a prompt
+# https://github.com/sindresorhus/pure
+if [ -d ~/.zsh/pure ]
+then
+  fpath+=~/.zsh/pure
+  autoload -U promptinit
+  promptinit
+  prompt pure
+fi
 
 alias ..='cd ..'
 alias ...='cd ../..'
