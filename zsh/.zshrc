@@ -1,7 +1,17 @@
-export PATH="./node_modules/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export N_PREFIX=$HOME/.n
+export PATH="$N_PREFIX/bin:./node_modules/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export FZF_DEFAULT_COMMAND="rg --files --ignore --hidden -g '!.git/'"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias mkdir='mkdir -pv'
+alias c='clear'
+alias g='git'
+alias v='vim'
+alias t='tmux'
+alias ls='exa -al --color=always --group-directories-first --classify'
 
 clear
 [ -z $TMUX ] && cowsay -f moose -p 'Happy coding!'
@@ -36,28 +46,23 @@ then
   prompt pure
 fi
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias mkdir='mkdir -pv'
-alias c='clear'
-alias g='git'
-alias v='vim'
-alias t='tmux'
-alias ls='exa -al --color=always --group-directories-first --classify'
+# Enable fish-like syntax highlighting for zsh
+# https://github.com/zsh-users/zsh-syntax-highlighting
+if [ -d ~/.zsh/zsh-syntax-highlighting ]
+then
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-# fzf bindings & completions
+# Enable fish-like autosuggestions for zsh
+# https://github.com/zsh-users/zsh-autosuggestions
+if [ -d ~/.zsh/zsh-autosuggestions ]
+then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+  bindkey '^ ' autosuggest-accept
+fi
+
+# Load fzf bindings & completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Fish-like syntax highlighting for zsh
-[ -d ~/.zsh/zsh-syntax-highlighting ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Fish-like autosuggestions for zsh
-[ -d ~/.zsh/zsh-autosuggestions ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-[ -d ~/.zsh/zsh-autosuggestions ] && bindkey '^ ' autosuggest-accept
-
-# Load nvm
-export PATH="$HOME/.nvm/versions/node/v14.16.1/bin:$PATH"
-[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh --no-use
 
 # Load extra configuration
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh
