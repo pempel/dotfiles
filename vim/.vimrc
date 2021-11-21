@@ -1,7 +1,7 @@
 " Be iMproved
 set nocompatible
 
-" Set a custom leader key
+" Set the <Leader> key
 let mapleader=","
 
 " Reload the .vimrc file without closing vim
@@ -11,12 +11,12 @@ nnoremap <Leader>r :source ~/.vimrc<CR>
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('challenger-deep-theme/vim', {'name': 'challenger-deep-theme'})
+call minpac#add('mhartington/oceanic-next')
+call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('itchyny/lightline.vim')
-call minpac#add('junegunn/fzf.vim')
-call minpac#add('ryanoasis/vim-devicons')
+" call minpac#add('junegunn/fzf.vim')
 call minpac#add('preservim/nerdtree')
 call minpac#add('preservim/nerdcommenter')
 command! Pupdate call minpac#update()
@@ -24,7 +24,7 @@ command! Pclean call minpac#clean()
 
 " Configure lightline
 let g:lightline = {
-\ 'colorscheme': 'challenger_deep',
+\ 'colorscheme': 'oceanicnext',
 \ 'active': {
 \   'right': [
 \     ['lineinfo'],
@@ -37,15 +37,15 @@ let g:lightline = {
 " Configure fzf
 " Hitting <c-x> opens the file under the cursor as a horizontal split
 " Hitting <c-v> opens that file as a vertical split
-set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :Files<CR>
-nnoremap <C-f> :Rg<CR>
+" set rtp+=/usr/local/opt/fzf
+" nnoremap <C-p> :Files<CR>
+" nnoremap <C-f> :Rg<CR>
 " Overwrite the :Files command
-command! -bang -nargs=? -complete=dir Files
-\ call fzf#vim#files(<q-args>, <bang>0)
+" command! -bang -nargs=? -complete=dir Files
+" \ call fzf#vim#files(<q-args>, <bang>0)
 " Overwrite the :Rg command
-command! -bang -nargs=* Rg
-\ call fzf#vim#grep('rg --glob "!*.lock" --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" command! -bang -nargs=* Rg
+" \ call fzf#vim#grep('rg --glob "!*.lock" --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Configure nerdtree
 let g:NERDTreeWinPos = 'right'
@@ -60,9 +60,9 @@ map <C-c> <Plug>NERDCommenterToggle
 " Enable file type detection
 filetype plugin on
 
-" Under default settings, making changes and then opening a new file will
-" display `E37: No write since last change (add ! to override)`. This setting
-" hides buffers instead of closing them.
+" Under default settings, making changes and then opening a new file
+" will display `E37: No write since last change (add ! to override)`.
+" This setting hides buffers instead of closing them.
 set hidden
 
 " Disable swap files
@@ -103,9 +103,9 @@ set number
 autocmd VimResized * wincmd =
 
 " Set colors
-syntax on
-colorscheme challenger_deep
+syntax enable
 set termguicolors
+colorscheme OceanicNext
 
 " Set tabs
 set tabstop=2
