@@ -44,11 +44,11 @@ alias ls='exa -al --color=always --group-directories-first --classify'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Fish-like syntax highlighting for zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -d ~/.zsh/zsh-syntax-highlighting ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Fish-like autosuggestions for zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^ ' autosuggest-accept
+[ -d ~/.zsh/zsh-autosuggestions ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -d ~/.zsh/zsh-autosuggestions ] && bindkey '^ ' autosuggest-accept
 
 # Load nvm
 export PATH="$HOME/.nvm/versions/node/v14.16.1/bin:$PATH"
