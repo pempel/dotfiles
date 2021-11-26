@@ -1,6 +1,9 @@
 " Be iMproved
 set nocompatible
 
+" Disable the start screen.
+set shm+=I
+
 " Set the <Leader> key
 let mapleader=","
 
