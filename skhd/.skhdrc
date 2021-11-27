@@ -1,6 +1,4 @@
 ctrl - 1 : open -a 'Alacritty'
-ctrl - 2 : open -a 'Google Chrome'
+ctrl - 2 : open -a 'Firefox'
 ctrl - 3 : open -a 'Mail'
 ctrl - 4 : open -a 'Slack'
-ctrl - 5 : open -a 'Bear'
-
