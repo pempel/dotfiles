@@ -10,8 +10,8 @@ set scrolloff=10
 " Set the <Leader> key
 let mapleader=","
 
-" Reload the .vimrc file without closing vim
-nnoremap <Leader>r :source ~/.vimrc<CR>
+" Reload the config file without closing nvim
+nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
 
 " Load packages
 packadd minpac
