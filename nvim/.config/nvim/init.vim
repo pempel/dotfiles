@@ -1,8 +1,11 @@
 " Be iMproved
 set nocompatible
 
-" Disable the start screen.
+" Disable the start screen
 set shm+=I
+
+" Set the minimum number of lines to keep above and below the cursor
+set scrolloff=10
 
 " Set the <Leader> key
 let mapleader=","
