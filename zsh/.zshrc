@@ -16,7 +16,7 @@ alias ...='cd ../..'
 alias mkdir='mkdir -pv'
 alias c='clear'
 alias g='git'
-alias v='vim'
+alias v='nvim'
 alias t='tmux'
 alias ls='exa -al --color=always --group-directories-first --classify'
 
