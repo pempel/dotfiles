@@ -49,7 +49,7 @@ nnoremap <C-f> :Rg<CR>
 " Overwrite the :Rg command
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --glob "!*.lock" --line-number --column --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
+  \   'rg --glob "!*.lock" --line-number --column --no-heading --smart-case --color=always '.shellescape(<q-args>),
   \   1,
   \   {'options': '--delimiter : --nth 4..'},
   \   <bang>0
@@ -91,12 +91,6 @@ set splitbelow
 
 " Ignore case when searching
 set ignorecase
-
-" Show search matches as you type
-set incsearch
-
-" Highlight all search matches
-set hlsearch
 
 " Clear last search highlighting
 nnoremap <silent> <Esc><Esc> :noh<CR>
