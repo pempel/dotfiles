@@ -1,3 +1,10 @@
+# Let files beginning with a . be matched without explicitly specifying the dot
+setopt globdots
+
+# If a new command line being added to the history list duplicates an older one,
+# the older command is removed from the list
+setopt HIST_IGNORE_ALL_DUPS
+
 export N_PREFIX=$HOME/.n
 export PATH="$N_PREFIX/bin:./node_modules/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export LANG=en_US.UTF-8
@@ -15,10 +22,6 @@ alias ls='exa -al --color=always --group-directories-first --classify'
 
 clear
 [ -z $TMUX ] && cowsay -f moose -p 'Happy coding!'
-
-# If a new command line being added to the history list duplicates an older one,
-# the older command is removed from the list
-setopt HIST_IGNORE_ALL_DUPS
 
 # Enable command completion
 autoload -Uz compinit
