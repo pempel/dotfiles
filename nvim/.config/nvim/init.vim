@@ -1,17 +1,14 @@
 " Be iMproved
 set nocompatible
 
-" Disable the start screen
-set shm+=I
-
-" Set the minimum number of lines to keep above and below the cursor
-set scrolloff=10
-
 " Set the <Leader> key
 let mapleader=","
 
 " Reload the config file without closing nvim
 nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
+
+" Clear last search highlighting
+nnoremap <silent> <Esc><Esc> :noh<CR>
 
 " Load packages
 packadd minpac
@@ -21,52 +18,61 @@ call minpac#add('mhartington/oceanic-next')
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('jremmen/vim-ripgrep')
 call minpac#add('itchyny/lightline.vim')
-call minpac#add('junegunn/fzf')
-call minpac#add('junegunn/fzf.vim')
 call minpac#add('preservim/nerdtree')
 call minpac#add('preservim/nerdcommenter')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
 
+" Configure fzf
+set rtp+=~/.fzf
+let g:fzf_layout = {
+  \   'window': {
+  \     'width': 0.9,
+  \     'height': 0.5,
+  \     'relative': v:true,
+  \     'yoffset': 1.0
+  \   }
+  \ }
+let g:fzf_action = { 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
+nnoremap <C-p> :FZF<CR>
+
+" Configure ripgrep
+let g:rg_highlight = 'true'
+nnoremap <C-f> :Rg 
+
 " Configure lightline
 let g:lightline = {
   \ 'colorscheme': 'oceanicnext',
-  \ 'active': {
-  \   'right': [
-  \     ['lineinfo'],
-  \     ['percent'],
-  \     ['fileencoding']
-  \   ]
+  \ 'active': { 'right': [['lineinfo'], ['percent'], ['fileencoding']] }
   \ }
-  \ }
-
-" Configure fzf
-" Hitting <c-x> opens the file under the cursor as a horizontal split
-" Hitting <c-v> opens that file as a vertical split
-nnoremap <C-p> :Files<CR>
-nnoremap <C-f> :Rg<CR>
-" Overwrite the :Rg command
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --glob "!*.lock" --line-number --column --no-heading --smart-case --color=always '.shellescape(<q-args>),
-  \   1,
-  \   {'options': '--delimiter : --nth 4..'},
-  \   <bang>0
-  \ )
 
 " Configure nerdtree
 let g:NERDTreeWinPos = 'right'
 let g:NERDTreeWinSize = 40
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeMapOpenSplit = 's'
+let g:NERDTreeMapOpenVSplit = 'v'
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 " Configure nerdcommenter
 let g:NERDSpaceDelims = 1
 map <C-c> <Plug>NERDCommenterToggle
 
+" Set colors
+syntax enable
+set termguicolors
+colorscheme OceanicNext
+
 " Enable file type detection
 filetype plugin on
+
+" Disable the start screen
+set shm+=I
+
+" Set the minimum number of lines to keep above and below the cursor
+set scrolloff=8
 
 " Under default settings, making changes and then opening a new file
 " will display `E37: No write since last change (add ! to override)`.
@@ -83,17 +89,16 @@ set ttimeoutlen=0
 " Disable word wrapping
 set nowrap
 
-" Make the new window appear on the right
-set splitright
-
 " Make the new window appear below the current window
 set splitbelow
 
-" Ignore case when searching
-set ignorecase
+" Make the new window appear on the right
+set splitright
 
-" Clear last search highlighting
-nnoremap <silent> <Esc><Esc> :noh<CR>
+" If a search pattern contains upper case characters, search is case sensitive.
+" Otherwise, it is not.
+set ignorecase
+set smartcase
 
 " Show the status line always
 set laststatus=2
@@ -104,12 +109,7 @@ set number
 " Automatically rebalance windows on Vim resize
 autocmd VimResized * wincmd =
 
-" Set colors
-syntax enable
-set termguicolors
-colorscheme OceanicNext
-
-" Set tabs
+" Set tab settings
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
