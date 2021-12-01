@@ -7,9 +7,6 @@ let mapleader=","
 " Reload the config file without closing nvim
 nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
 
-" Clear last search highlighting
-nnoremap <silent> <Esc><Esc> :noh<CR>
-
 " Load packages
 packadd minpac
 call minpac#init()
@@ -99,6 +96,9 @@ set splitright
 " Otherwise, it is not.
 set ignorecase
 set smartcase
+
+" Turn off the highlighted matches
+set nohlsearch
 
 " Show the status line always
 set laststatus=2
