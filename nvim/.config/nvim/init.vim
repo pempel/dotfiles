@@ -26,7 +26,7 @@ command! Pclean call minpac#clean()
 set rtp+=~/.fzf
 let g:fzf_layout = {
   \   'window': {
-  \     'width': 0.9,
+  \     'width': 1.0,
   \     'height': 0.5,
   \     'relative': v:true,
   \     'yoffset': 1.0
