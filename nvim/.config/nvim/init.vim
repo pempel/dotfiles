@@ -4,7 +4,7 @@ set nocompatible
 " Set the <Leader> key
 let mapleader=","
 
-" Reload the config file without closing nvim
+" Reload the nvim configuration without closing it
 nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
 
 " Load packages
