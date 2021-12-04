@@ -10,6 +10,9 @@ nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
 " Switch to another tmux session
 nnoremap <C-s> :! tmux new-window tmux-sessionizer<CR><CR>
 
+" Clear last search highlighting
+nnoremap <silent> <Esc><Esc> :noh<CR>
+
 " Load packages
 packadd minpac
 call minpac#init()
