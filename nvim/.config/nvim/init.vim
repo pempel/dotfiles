@@ -42,7 +42,7 @@ let g:fzf_layout = {
 nnoremap <C-p> :FZF<CR>
 
 " Configure ripgrep
-let g:rg_highlight = 'true'
+let g:rg_command = 'rg --vimgrep --hidden --glob "!.git/"'
 nnoremap <C-f> :Rg 
 
 " Configure lightline
