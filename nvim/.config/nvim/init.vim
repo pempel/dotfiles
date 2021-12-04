@@ -7,6 +7,9 @@ let mapleader=","
 " Reload the nvim configuration without closing it
 nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
 
+" Switch to another tmux session
+nnoremap <C-s> :! tmux new-window tmux-sessionizer<CR><CR>
+
 " Load packages
 packadd minpac
 call minpac#init()
@@ -24,6 +27,7 @@ command! Pclean call minpac#clean()
 
 " Configure fzf
 set rtp+=~/.fzf
+let g:fzf_action = { 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
 let g:fzf_layout = {
   \   'window': {
   \     'width': 1.0,
@@ -32,7 +36,6 @@ let g:fzf_layout = {
   \     'yoffset': 1.0
   \   }
   \ }
-let g:fzf_action = { 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
 nnoremap <C-p> :FZF<CR>
 
 " Configure ripgrep
