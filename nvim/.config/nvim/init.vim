@@ -109,6 +109,9 @@ set laststatus=2
 " Show line numbers
 set number
 
+" Highlight the current line
+set cursorline
+
 " Automatically rebalance windows on Vim resize
 autocmd VimResized * wincmd =
 
