@@ -1,12 +1,15 @@
 # Let files beginning with a . be matched without explicitly specifying the dot
 setopt globdots
 
+# Unbind \C-s and \C-q
+setopt noflowcontrol
+
 # If a new command line being added to the history list duplicates an older one,
 # the older command is removed from the list
 setopt HIST_IGNORE_ALL_DUPS
 
 export N_PREFIX=$HOME/.n
-export PATH="$N_PREFIX/bin:./node_modules/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="./node_modules/.bin:$HOME/.n/bin:$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export FZF_DEFAULT_COMMAND="rg --files --ignore --hidden -g '!.git/'"
@@ -41,8 +44,7 @@ export KEYTIMEOUT=1
 
 # Set Pure as a prompt
 # https://github.com/sindresorhus/pure
-if [ -d ~/.zsh/pure ]
-then
+if [ -d ~/.zsh/pure ]; then
   fpath+=~/.zsh/pure
   autoload -U promptinit
   promptinit
@@ -51,18 +53,18 @@ fi
 
 # Enable fish-like syntax highlighting for zsh
 # https://github.com/zsh-users/zsh-syntax-highlighting
-if [ -d ~/.zsh/zsh-syntax-highlighting ]
-then
+if [ -d ~/.zsh/zsh-syntax-highlighting ]; then
   source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # Enable fish-like autosuggestions for zsh
 # https://github.com/zsh-users/zsh-autosuggestions
-if [ -d ~/.zsh/zsh-autosuggestions ]
-then
+if [ -d ~/.zsh/zsh-autosuggestions ]; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   bindkey '^ ' autosuggest-accept
 fi
+
+[ -f ~/.local/bin/tmux-sessionizer ] && bindkey -s '^s' 'tmux-sessionizer^M'
 
 # Load fzf bindings & completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
