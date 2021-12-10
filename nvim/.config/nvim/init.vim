@@ -47,8 +47,14 @@ nnoremap <C-f> :Rg
 
 " Configure lightline
 let g:lightline = {
-  \ 'colorscheme': 'everforest',
-  \ 'active': { 'right': [['lineinfo'], ['percent'], ['fileencoding']] }
+  \   'colorscheme': 'everforest',
+  \   'component': {
+  \     'lineinfo': "%{line('.') . '/' . line('$') . ':' . col('.')}"
+  \   },
+  \   'active': {
+  \     'left': [['mode', 'paste'], ['readonly', 'relativepath', 'modified']],
+  \     'right': [['lineinfo'], ['fileencoding']]
+  \   }
   \ }
 
 " Configure nerdtree
