@@ -19,27 +19,94 @@ font:
     family: FiraCode Nerd Font
     style: Italic
 
-# Oceanic Next
-# https://github.com/eendroroy/alacritty-theme
-colors:
-  primary:
-    background: '0x1b2b34'
-    foreground: '0xd8dee9'
-  normal:
-    black:   '0x29414f'
-    red:     '0xec5f67'
-    green:   '0x99c794'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0x65737e'
-  bright:
-    black:   '0x405860'
-    red:     '0xec5f67'
-    green:   '0x99c794'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xadb5c0'
+schemes:
+  oceanic_next: &oceanic_next
+    primary:
+      background: '0x1b2b34'
+      foreground: '0xd8dee9'
+    normal:
+      black:   '0x29414f'
+      red:     '0xec5f67'
+      green:   '0x99c794'
+      yellow:  '0xfac863'
+      blue:    '0x6699cc'
+      magenta: '0xc594c5'
+      cyan:    '0x5fb3b3'
+      white:   '0x65737e'
+    bright:
+      black:   '0x405860'
+      red:     '0xec5f67'
+      green:   '0x99c794'
+      yellow:  '0xfac863'
+      blue:    '0x6699cc'
+      magenta: '0xc594c5'
+      cyan:    '0x5fb3b3'
+      white:   '0xadb5c0'
+  everforest_dark_hard: &everforest_dark_hard
+    primary:
+      background: '#2b3339'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+  everforest_dark_medium: &everforest_dark_medium
+    primary:
+      background: '#2f383e'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+  everforest_dark_soft: &everforest_dark_soft
+    primary:
+      background: '#323d43'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+
+colors: *everforest_dark_hard

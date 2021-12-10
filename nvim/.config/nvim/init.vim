@@ -17,7 +17,7 @@ nnoremap <silent> <Esc><Esc> :noh<CR>
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('mhartington/oceanic-next')
+call minpac#add('sainnhe/everforest')
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('christoomey/vim-tmux-navigator')
@@ -47,7 +47,7 @@ nnoremap <C-f> :Rg
 
 " Configure lightline
 let g:lightline = {
-  \ 'colorscheme': 'oceanicnext',
+  \ 'colorscheme': 'everforest',
   \ 'active': { 'right': [['lineinfo'], ['percent'], ['fileencoding']] }
   \ }
 
@@ -66,7 +66,8 @@ map <C-c> <Plug>NERDCommenterToggle
 " Set colors
 syntax enable
 set termguicolors
-colorscheme OceanicNext
+colorscheme everforest
+let g:everforest_background = 'hard'
 
 " Enable file type detection
 filetype plugin on
