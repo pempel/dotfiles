@@ -8,8 +8,9 @@ setopt noflowcontrol
 # the older command is removed from the list
 setopt HIST_IGNORE_ALL_DUPS
 
-export N_PREFIX=$HOME/.n
 export PATH="./node_modules/.bin:$HOME/.n/bin:$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export N_PREFIX=$HOME/.n
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgreprc
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export FZF_DEFAULT_COMMAND="rg --files --ignore --hidden -g '!.git/'"
