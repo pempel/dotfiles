@@ -8,15 +8,15 @@ scrolling:
   history: 10000
 
 font:
-  size: 20
+  size: 22
   normal:
-    family: FiraCode Nerd Font
+    family: Dank Mono
     style: Regular
   bold:
-    family: FiraCode Nerd Font
+    family: Dank Mono
     style: Bold
   italic:
-    family: FiraCode Nerd Font
+    family: Dank Mono
     style: Italic
 
 schemes:
