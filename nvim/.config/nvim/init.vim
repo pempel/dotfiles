@@ -18,7 +18,6 @@ packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('sainnhe/everforest')
-call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('jremmen/vim-ripgrep')
@@ -73,8 +72,8 @@ map <C-c> <Plug>NERDCommenterToggle
 " Set colors
 syntax enable
 set termguicolors
-colorscheme everforest
 let g:everforest_background = 'hard'
+colorscheme everforest
 
 " Enable file type detection
 filetype plugin on
