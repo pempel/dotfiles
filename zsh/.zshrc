@@ -26,7 +26,7 @@ alias t='tmux'
 alias ls='exa -al --color=always --group-directories-first --classify'
 
 clear
-[ -z $TMUX ] && cowsay -f moose -p 'Happy coding!'
+[ -z $TMUX ] && cowsay -s 'Happy coding!'
 
 # Enable command completion
 autoload -Uz compinit
