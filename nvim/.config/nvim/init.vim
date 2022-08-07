@@ -13,12 +13,17 @@ nnoremap <C-s> :! tmux new-window tmux-sessionizer<CR><CR>
 " Clear last search highlighting
 nnoremap <silent> <Esc><Esc> :noh<CR>
 
+" Simplify window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Load packages
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('sainnhe/everforest')
-call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('jremmen/vim-ripgrep')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('preservim/nerdtree')
