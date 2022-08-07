@@ -18,7 +18,6 @@ packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('sainnhe/everforest')
-call minpac#add('sheerun/vim-polyglot')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('jremmen/vim-ripgrep')
 call minpac#add('itchyny/lightline.vim')
