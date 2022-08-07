@@ -54,7 +54,7 @@ let g:lightline = {
   \     'lineinfo': "%{line('.') . '/' . line('$') . ':' . col('.')}"
   \   },
   \   'active': {
-  \     'left': [['mode', 'paste'], ['readonly', 'relativepath', 'modified']],
+  \     'left': [['paste'], ['readonly', 'relativepath', 'modified']],
   \     'right': [['lineinfo'], ['fileencoding']]
   \   }
   \ }
