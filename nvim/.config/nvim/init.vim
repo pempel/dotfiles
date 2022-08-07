@@ -27,7 +27,6 @@ call minpac#add('sainnhe/everforest')
 call minpac#add('jremmen/vim-ripgrep')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('preservim/nerdtree')
-call minpac#add('preservim/nerdcommenter')
 command! Pupdate call minpac#update()
 command! Pclean call minpac#clean()
 
@@ -67,10 +66,6 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
 nnoremap <C-t> :NERDTreeToggle<CR>
-
-" Configure nerdcommenter
-let g:NERDSpaceDelims = 1
-map <C-c> <Plug>NERDCommenterToggle
 
 " Set colors
 syntax enable
