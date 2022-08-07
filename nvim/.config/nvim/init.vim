@@ -24,6 +24,7 @@ packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('sainnhe/everforest')
+call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('jremmen/vim-ripgrep')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('preservim/nerdtree')
