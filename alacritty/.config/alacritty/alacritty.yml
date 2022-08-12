@@ -1,5 +1,6 @@
 window:
   startup_mode: Maximized
+  decorations: buttonless
   padding:
     x: 5
     y: 5
