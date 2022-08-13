@@ -19,6 +19,7 @@ nvim_web_devicons.setup({
       name = 'Brewfile'
     },
     ['.zshrc'] = conf_icon('Zshrc'),
-    ['skhdrc'] = conf_icon('Skhdrc')
+    ['skhdrc'] = conf_icon('Skhdrc'),
+    ['config'] = conf_icon('Config')
   }
 })
