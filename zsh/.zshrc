@@ -8,11 +8,17 @@ setopt noflowcontrol
 # one, the older command is removed from the list
 setopt HIST_IGNORE_ALL_DUPS
 
-export PATH="./node_modules/.bin:$HOME/.n/bin:$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/opt/homebrew/sbin:/usr/sbin:/sbin:$PATH"
-export N_PREFIX=$HOME/.n
+export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+clear
+[ -z $TMUX ] && cowsay -s 'Happy coding!'
+
 export BAT_THEME=ansi
+
+export ASDF_DATA_DIR=$HOME/.config/asdf
+[ -d $ASDF_DATA_DIR ] && source $(brew --prefix asdf)/libexec/asdf.sh
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -22,9 +28,6 @@ alias g='git'
 alias v='nvim'
 alias t='tmux'
 alias ls='exa -al --color=always --group-directories-first --classify'
-
-clear
-[ -z $TMUX ] && cowsay -s 'Happy coding!'
 
 # Enable command completion
 autoload -Uz compinit

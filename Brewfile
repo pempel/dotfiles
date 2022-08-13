@@ -3,6 +3,7 @@ tap "homebrew/services"
 tap "homebrew/cask"
 tap "koekeishiya/formulae"
 
+brew "asdf"
 brew "bat"
 brew "cowsay"
 brew "exa"
