@@ -10,7 +10,6 @@ setopt HIST_IGNORE_ALL_DUPS
 
 export PATH="./node_modules/.bin:$HOME/.n/bin:$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/opt/homebrew/sbin:/usr/sbin:/sbin:$PATH"
 export N_PREFIX=$HOME/.n
-export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgreprc
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BAT_THEME=ansi
