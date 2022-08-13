@@ -10,7 +10,8 @@ nvim_tree.setup({
     mappings = {
       list = {
         { key = 'x', action = 'split' },
-        { key = 'v', action = 'vsplit' }
+        { key = 'v', action = 'vsplit' },
+        { key = 'e', action = 'expand_all' }
       }
     }
   },
