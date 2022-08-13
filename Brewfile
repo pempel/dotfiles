@@ -9,6 +9,7 @@ brew "cowsay"
 brew "exa"
 brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
+brew "htop"
 brew "jq"
 brew "nvim"
 brew "ripgrep"
