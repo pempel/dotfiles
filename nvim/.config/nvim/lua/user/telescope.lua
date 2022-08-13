@@ -8,6 +8,7 @@ local actions = require('telescope.actions')
 telescope.setup({
   defaults = {
     layout_strategy = 'vertical',
+    preview = false,
     file_ignore_patterns = {
       '.git/'
     },
