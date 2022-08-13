@@ -8,7 +8,7 @@ setopt noflowcontrol
 # one, the older command is removed from the list
 setopt HIST_IGNORE_ALL_DUPS
 
-export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:$PATH"
+export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
