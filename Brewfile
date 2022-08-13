@@ -6,6 +6,7 @@ tap "koekeishiya/formulae"
 brew "bat"
 brew "cowsay"
 brew "exa"
+brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
 brew "jq"
 brew "nvim"

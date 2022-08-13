@@ -13,7 +13,6 @@ export N_PREFIX=$HOME/.n
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgreprc
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export FZF_DEFAULT_COMMAND="rg --files --ignore --hidden -g '!.git/'"
 export BAT_THEME=ansi
 
 alias ..='cd ..'
