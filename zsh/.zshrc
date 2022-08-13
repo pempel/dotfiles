@@ -15,8 +15,6 @@ export LC_ALL=en_US.UTF-8
 clear
 [ -z $TMUX ] && cowsay -s 'Happy coding!'
 
-export BAT_THEME=ansi
-
 export ASDF_DATA_DIR=$HOME/.config/asdf
 [ -d $ASDF_DATA_DIR ] && source $(brew --prefix asdf)/libexec/asdf.sh
 
