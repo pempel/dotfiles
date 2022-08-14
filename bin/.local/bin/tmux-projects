@@ -1,0 +1,21 @@
+#!/bin/sh
+
+project_name=$(find $PROJECTS -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --reverse)
+
+if [ -z $project_name ]; then
+  exit
+fi
+
+project_path="$PROJECTS/$project_name"
+session_name=$(echo $project_name | tr . _)
+
+if ! tmux has-session -t $session_name 2>/dev/null; then
+  tmux new-session -s $session_name -c $project_path -n 'nvim' -d nvim
+  tmux new-window -t $session_name -c $project_path -n 'zsh' -d
+fi
+
+if [ -z $TMUX ]; then
+  tmux attach-session -t $session_name:nvim
+else
+  tmux switch-client -t $session_name:nvim
+fi

@@ -11,6 +11,7 @@ setopt HIST_IGNORE_ALL_DUPS
 export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export PROJECTS="$HOME/Projects"
 
 clear
 [ -z $TMUX ] && cowsay -s 'Happy coding!'
@@ -52,6 +53,9 @@ if [ -d ~/.zsh/pure ]; then
   prompt pure
 fi
 
+# Load fzf bindings & completions
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Enable fish-like syntax highlighting for zsh
 # https://github.com/zsh-users/zsh-syntax-highlighting
 if [ -d ~/.zsh/zsh-syntax-highlighting ]; then
@@ -65,10 +69,6 @@ if [ -d ~/.zsh/zsh-autosuggestions ]; then
   bindkey '^ ' autosuggest-accept
 fi
 
-[ -f ~/.local/bin/tmux-sessionizer ] && bindkey -s '^s' 'tmux-sessionizer^M'
+[ -f ~/.local/bin/tmux-projects ] && bindkey -s '^j' 'tmux-projects^M'
 
-# Load fzf bindings & completions
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Load extra configuration
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh

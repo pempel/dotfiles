@@ -1,4 +1,4 @@
-vim.opt.termguicolors = true     -- set term gui colors (most terminals support this)
+vim.opt.termguicolors = true     -- enables 24-bit RGB color (most terminals support this)
 vim.opt.number = true            -- show line numbers
 vim.opt.signcolumn = 'yes'       -- always show the sign column
 vim.opt.cursorline = true        -- highlight the current line
