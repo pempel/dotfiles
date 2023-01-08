@@ -1,6 +1,6 @@
 local colorscheme = 'everforest'
 
-vim.g.everforest_background = 'hard'
+vim.g.everforest_background = 'medium'
 vim.opt.background = 'dark'
 
 local status_ok, _ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
