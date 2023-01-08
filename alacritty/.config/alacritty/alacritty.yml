@@ -9,7 +9,7 @@ scrolling:
   history: 10000
 
 font:
-  size: 22
+  size: 20
   normal:
     family: DankMono Nerd Font Mono
     style: Regular
