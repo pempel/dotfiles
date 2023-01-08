@@ -11,10 +11,8 @@ setopt HIST_IGNORE_ALL_DUPS
 export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export XDG_CONFIG_HOME="$HOME/.config"
 export PROJECTS="$HOME/Projects"
-
-clear
-[ -z $TMUX ] && cowsay -s 'Happy coding!'
 
 export ASDF_DATA_DIR=$HOME/.config/asdf
 [ -d $ASDF_DATA_DIR ] && source $(brew --prefix asdf)/libexec/asdf.sh
@@ -52,6 +50,10 @@ if [ -d ~/.zsh/pure ]; then
   promptinit
   prompt pure
 fi
+
+# Show the greeting message
+clear
+[ -z $TMUX ] && cowsay -s 'Happy coding!'
 
 # Load fzf bindings & completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
