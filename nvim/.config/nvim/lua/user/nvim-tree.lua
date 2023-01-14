@@ -24,3 +24,7 @@ nvim_tree.setup({
     enable = false
   }
 })
+
+vim.cmd([[highlight NvimTreeNormal guibg=none]])
+vim.cmd([[highlight NvimTreeEndOfBuffer guibg=none]])
+vim.cmd([[highlight NvimTreeCursorLine guibg=#343f44]])
