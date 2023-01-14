@@ -20,6 +20,7 @@ configs.setup {
     'python',
     'ruby',
     'sql',
+    'vim',
     'yaml',
   },
   highlight = {
