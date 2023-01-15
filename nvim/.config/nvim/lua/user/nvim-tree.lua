@@ -4,25 +4,30 @@ if not status_ok then
 end
 
 nvim_tree.setup({
+  open_on_setup = true,
   view = {
     side = 'right',
-    width = 40,
+    width = 42,
     mappings = {
       list = {
-        { key = '<c-x>', action = 'split' },
-        { key = '<c-v>', action = 'vsplit' },
+        { key = '<Tab>', action = 'preview' },
+        { key = '<C-x>', action = 'split' },
+        { key = '<C-v>', action = 'vsplit' },
+        { key = '<C-k>', action = '' },
+        { key = 'i', action = 'toggle_file_info' },
         { key = 'a', action = 'create' },
         { key = 'd', action = 'remove' },
+        { key = 'r', action = 'rename' },
         { key = 'x', action = 'cut' },
         { key = 'c', action = 'copy' },
         { key = 'p', action = 'paste' },
-        { key = 'e', action = 'expand_all' }
-      }
-    }
+        { key = 'e', action = 'expand_all' },
+      },
+    },
   },
   git = {
-    enable = false
-  }
+    enable = false,
+  },
 })
 
 vim.cmd([[highlight NvimTreeNormal guibg=none]])
