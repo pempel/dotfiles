@@ -30,7 +30,10 @@ nvim_tree.setup({
   },
 })
 
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', { desc = 'Toggle [t]ree view' })
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {
+  silent = true,
+  desc = 'Toggle [t]ree view'
+})
 
 vim.cmd([[highlight NvimTreeNormal guibg=none]])
 vim.cmd([[highlight NvimTreeEndOfBuffer guibg=none]])
