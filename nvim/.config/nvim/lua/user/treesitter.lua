@@ -1,9 +1,9 @@
-local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
-if not status_ok then
+local ok, nvim_treesitter_configs = pcall(require, 'nvim-treesitter.configs')
+if not ok then
   return
 end
 
-configs.setup {
+nvim_treesitter_configs.setup({
   ensure_installed = {
     'bash',
     'c',
@@ -11,6 +11,7 @@ configs.setup {
     'css',
     'elixir',
     'go',
+    'help',
     'html',
     'java',
     'javascript',
@@ -25,5 +26,5 @@ configs.setup {
   },
   highlight = {
     enable = true,
-  }
-}
+  },
+})
