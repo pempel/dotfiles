@@ -6,26 +6,13 @@
 --   term_mode = 't'
 --   command_mode = 'c'
 
-local function keymap(mode, lhs, rhs)
-  vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true })
-end
-
--- Use space as <leader>
-keymap('', '<space>', '<nop>')
+-- Set <space> as the leader key
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+vim.keymap.set({ 'n', 'v' }, '<space>', '<nop>', { silent = true })
 
 -- Simplify window navigation
-keymap('n', '<c-h>', '<c-w>h')
-keymap('n', '<c-j>', '<c-w>j')
-keymap('n', '<c-k>', '<c-w>k')
-keymap('n', '<c-l>', '<c-w>l')
-
--- nvim-tree
-keymap('n', '<leader>e', ':NvimTreeToggle<cr>')
-
--- telescope
-keymap('n', '<leader>f', ':Telescope find_files<cr>')
-keymap('n', '<leader>t', ':Telescope live_grep<cr>')
-
--- gitsigns
-keymap('n', '<leader>b', ':Gitsigns blame_line<cr>')
+vim.keymap.set('n', '<c-h>', '<c-w>h')
+vim.keymap.set('n', '<c-j>', '<c-w>j')
+vim.keymap.set('n', '<c-k>', '<c-w>k')
+vim.keymap.set('n', '<c-l>', '<c-w>l')

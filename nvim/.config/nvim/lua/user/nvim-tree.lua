@@ -1,5 +1,5 @@
-local status_ok, nvim_tree = pcall(require, 'nvim-tree')
-if not status_ok then
+local ok, nvim_tree = pcall(require, 'nvim-tree')
+if not ok then
   return
 end
 
@@ -29,6 +29,8 @@ nvim_tree.setup({
     enable = false,
   },
 })
+
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', { desc = 'Toggle [t]ree view' })
 
 vim.cmd([[highlight NvimTreeNormal guibg=none]])
 vim.cmd([[highlight NvimTreeEndOfBuffer guibg=none]])
