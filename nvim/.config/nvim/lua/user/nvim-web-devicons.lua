@@ -16,20 +16,25 @@ nvim_web_devicons.setup({
       color = '#f0b357',
       name = 'Brewfile',
     },
-    ['.zshrc'] = {
+    ['config'] = {
       icon = '',
       color = '#6d8086',
-      name = 'Zshrc',
+      name = 'Config',
+    },
+    ['ripgreprc'] = {
+      icon = '',
+      color = '#6d8086',
+      name = 'Ripgreprc',
     },
     ['skhdrc'] = {
       icon = '',
       color = '#6d8086',
       name = 'Skhdrc',
     },
-    ['config'] = {
+    ['.zshrc'] = {
       icon = '',
       color = '#6d8086',
-      name = 'Config',
+      name = 'Zshrc',
     },
   },
 })
