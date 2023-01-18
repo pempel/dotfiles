@@ -11,7 +11,7 @@ setopt HIST_IGNORE_ALL_DUPS
 export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export XDG_CONFIG_HOME="$HOME/.config"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export PROJECTS="$HOME/Projects"
 
 export ASDF_DATA_DIR=$HOME/.config/asdf
