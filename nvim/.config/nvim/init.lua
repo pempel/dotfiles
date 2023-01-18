@@ -5,7 +5,7 @@ require 'user.plugins'
 require 'user.treesitter'
 require 'user.colorscheme'
 require 'user.nvim-web-devicons'
-
+require 'user.indent-blankline'
 require 'user.lualine'
 require 'user.nvim-tree'
 require 'user.telescope'
