@@ -1,25 +1,35 @@
-local status_ok, nvim_web_devicons = pcall(require, 'nvim-web-devicons')
-if not status_ok then
+local ok, nvim_web_devicons = pcall(require, 'nvim-web-devicons')
+if not ok then
   return
-end
-
-local function conf_icon(name)
-  return {
-    icon = '',
-    color = '#6d8086',
-    name = name
-  }
 end
 
 nvim_web_devicons.setup({
   override = {
+    ["md"] = {
+      icon = "",
+      color = "#41535b",
+      cterm_color = "59",
+      name = "Md",
+    },
     ['Brewfile'] = {
       icon = '',
       color = '#f0b357',
-      name = 'Brewfile'
+      name = 'Brewfile',
     },
-    ['.zshrc'] = conf_icon('Zshrc'),
-    ['skhdrc'] = conf_icon('Skhdrc'),
-    ['config'] = conf_icon('Config')
-  }
+    ['.zshrc'] = {
+      icon = '',
+      color = '#6d8086',
+      name = 'Zshrc',
+    },
+    ['skhdrc'] = {
+      icon = '',
+      color = '#6d8086',
+      name = 'Skhdrc',
+    },
+    ['config'] = {
+      icon = '',
+      color = '#6d8086',
+      name = 'Config',
+    },
+  },
 })

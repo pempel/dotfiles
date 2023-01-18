@@ -37,4 +37,4 @@ vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {
 
 vim.cmd([[highlight NvimTreeNormal guibg=none]])
 vim.cmd([[highlight NvimTreeEndOfBuffer guibg=none]])
-vim.cmd([[highlight NvimTreeCursorLine guibg=#343f44]])
+vim.cmd([[highlight NvimTreeCursorLine guibg=#f8f5e4]])
