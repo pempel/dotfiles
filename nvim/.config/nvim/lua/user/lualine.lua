@@ -6,7 +6,7 @@ end
 local location = function()
   local l = vim.fn.line
   local c = vim.fn.col
-  return l('.') .. '/' .. l('$') .. ':' .. c('.') .. '/' .. c('$')
+  return l('.') .. '' .. l('$') .. ':' .. c('.') .. '' .. c('$')
 end
 
 lualine.setup({
@@ -27,6 +27,6 @@ lualine.setup({
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
-    lualine_z = { 'branch' },
+    lualine_z = {},
   },
 })
