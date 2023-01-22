@@ -7,13 +7,13 @@ nvim_tree.setup({
   open_on_setup = true,
   view = {
     side = 'right',
-    width = 42,
+    width = 40,
     mappings = {
       list = {
-        { key = '<Tab>', action = 'preview' },
-        { key = '<C-x>', action = 'split' },
-        { key = '<C-v>', action = 'vsplit' },
         { key = '<C-k>', action = '' },
+        { key = '<Tab>', action = 'preview' },
+        { key = '\'', action = 'split' },
+        { key = ';', action = 'vsplit' },
         { key = 'i', action = 'toggle_file_info' },
         { key = 'a', action = 'create' },
         { key = 'd', action = 'remove' },

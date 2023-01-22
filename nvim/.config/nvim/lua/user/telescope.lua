@@ -15,6 +15,8 @@ telescope.setup({
     },
     mappings = {
       i = {
+        ['\''] = actions.file_split,
+        [';'] = actions.file_vsplit,
         ['<c-j>'] = actions.move_selection_next,
         ['<c-k>'] = actions.move_selection_previous,
         ['<c-n>'] = actions.cycle_history_next,
