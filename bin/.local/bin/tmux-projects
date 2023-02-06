@@ -1,6 +1,6 @@
 #!/bin/sh
 
-project_name=$(find $PROJECTS -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --reverse)
+project_name=$(find -L $PROJECTS -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --reverse --color='gutter:#f57d26,bg+:#f57d26,fg+:#fdf6e3,pointer:#fdf6e3,hl+:#93b259,hl:#93b259')
 
 if [ -z $project_name ]; then
   exit
@@ -11,7 +11,7 @@ session_name=$(echo $project_name | tr . _)
 
 if ! tmux has-session -t $session_name 2>/dev/null; then
   tmux new-session -s $session_name -c $project_path -n 'nvim' -d nvim
-  tmux new-window -t $session_name -c $project_path -n 'zsh' -d
+  tmux split-window -t $session_name:nvim -c $project_path -l '35%' -h -d zsh
 fi
 
 if [ -z $TMUX ]; then

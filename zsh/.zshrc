@@ -11,10 +11,10 @@ setopt HIST_IGNORE_ALL_DUPS
 export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export PROJECTS="$HOME/Projects"
-
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export ASDF_DATA_DIR=$HOME/.config/asdf
+
 [ -d $ASDF_DATA_DIR ] && source $(brew --prefix asdf)/libexec/asdf.sh
 
 alias ..='cd ..'
@@ -70,7 +70,5 @@ if [ -d ~/.zsh/zsh-autosuggestions ]; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   bindkey '^ ' autosuggest-accept
 fi
-
-[ -f ~/.local/bin/tmux-projects ] && bindkey -s '^j' 'tmux-projects^M'
 
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh

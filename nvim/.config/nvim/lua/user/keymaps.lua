@@ -16,3 +16,6 @@ vim.keymap.set('n', '<c-h>', '<c-w>h')
 vim.keymap.set('n', '<c-j>', '<c-w>j')
 vim.keymap.set('n', '<c-k>', '<c-w>k')
 vim.keymap.set('n', '<c-l>', '<c-w>l')
+
+-- Jump back to a previously opened file (:h alternate-file)
+vim.keymap.set('n', '<c-b>', '<c-^>')

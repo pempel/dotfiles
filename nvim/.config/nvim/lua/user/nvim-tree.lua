@@ -7,7 +7,9 @@ nvim_tree.setup({
   open_on_setup = true,
   view = {
     side = 'right',
-    width = 40,
+    width = 35,
+    hide_root_folder = true,
+    signcolumn = 'no',
     mappings = {
       list = {
         { key = '<C-k>', action = '' },
