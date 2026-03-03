@@ -7,3 +7,5 @@ brew "nvim"
 brew "stow"
 brew "tmux"
 brew "tree"
+
+cask "ghostty"
