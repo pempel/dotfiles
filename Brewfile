@@ -1,7 +1,6 @@
 tap "homebrew/core"
 tap "homebrew/services"
 tap "homebrew/cask"
-tap "koekeishiya/formulae"
 
 brew "asdf"
 brew "cowsay"
@@ -11,7 +10,6 @@ brew "htop"
 brew "jq"
 brew "nvim"
 brew "ripgrep"
-brew "skhd", restart_service: true
 brew "stow"
 brew "tmux"
 brew "tree"
