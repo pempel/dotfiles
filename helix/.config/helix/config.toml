@@ -1,0 +1,23 @@
+theme = "everforest_light"
+
+[editor]
+color-modes = true
+cursorline = true
+bufferline = "always"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = ""
