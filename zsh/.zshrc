@@ -13,10 +13,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=hx
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
-export ASDF_DATA_DIR=$HOME/.config/asdf
 export PROJECTS="$HOME/Projects"
-
-[ -d $ASDF_DATA_DIR ] && source $(brew --prefix asdf)/libexec/asdf.sh
 
 alias ..='cd ..'
 alias ...='cd ../..'

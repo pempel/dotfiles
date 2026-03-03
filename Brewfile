@@ -2,7 +2,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "homebrew/cask"
 
-brew "asdf"
 brew "cowsay"
 brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
