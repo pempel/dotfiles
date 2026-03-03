@@ -6,7 +6,6 @@ tap "koekeishiya/formulae"
 brew "asdf"
 brew "bat"
 brew "cowsay"
-brew "exa"
 brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
 brew "htop"
