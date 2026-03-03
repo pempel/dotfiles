@@ -1,0 +1,37 @@
+[window]
+decorations = "Buttonless"
+option_as_alt = "Both"
+startup_mode = "Maximized"
+
+[font]
+size = 19
+offset = { y = 5 }
+normal = { family = "DankMono Nerd Font Mono" }
+bold = { family = "DankMono Nerd Font Mono" }
+italic = { family = "DankMono Nerd Font Mono" }
+
+# Everforest Light
+
+[colors.primary]
+background = "0xfdf6e3"
+foreground = "0x5c6a72"
+
+[colors.normal]
+black = "0x5c6a72"
+blue = "0x3a94c5"
+cyan = "0x35a77c"
+green = "0x8da101"
+magenta = "0xdf69ba"
+red = "0xf85552"
+white = "0xe0dcc7"
+yellow = "0xdfa000"
+
+[colors.bright]
+black = "0x5c6a72"
+blue = "0x3a94c5"
+cyan = "0x35a77c"
+green = "0x8da101"
+magenta = "0xdf69ba"
+red = "0xf85552"
+white = "0xe0dcc7"
+yellow = "0xdfa000"
