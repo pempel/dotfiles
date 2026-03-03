@@ -12,6 +12,5 @@ brew "ripgrep"
 brew "stow"
 brew "tmux"
 brew "tree"
-brew "yarn"
 
 cask "alacritty"
