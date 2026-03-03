@@ -4,7 +4,6 @@ tap "homebrew/cask"
 tap "koekeishiya/formulae"
 
 brew "asdf"
-brew "bat"
 brew "cowsay"
 brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
