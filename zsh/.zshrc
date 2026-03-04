@@ -21,6 +21,9 @@ alias mkdir='mkdir -pv'
 alias c='clear'
 alias g='git'
 alias t='tmux'
+if command -v eza &> /dev/null; then
+  alias ls='eza --long --all --group-directories-first --icons --color'
+fi
 
 # Set the prompt.
 # https://github.com/sindresorhus/pure
@@ -69,4 +72,6 @@ fi
 
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh
 
-eval "$(mise activate zsh)"
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi

@@ -1,4 +1,5 @@
 brew "cowsay"
+brew "eza"
 brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
 brew "htop"
