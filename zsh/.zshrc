@@ -1,5 +1,3 @@
-eval "$(mise activate zsh)"
-
 # Let files beginning with a . be matched without explicitly specifying the dot.
 setopt globdots
 
@@ -16,12 +14,26 @@ export LC_ALL=en_US.UTF-8
 export EDITOR=hx
 export PROJECTS="$HOME/Projects"
 
+# Set aliases.
 alias ..='cd ..'
 alias ...='cd ../..'
 alias mkdir='mkdir -pv'
 alias c='clear'
 alias g='git'
 alias t='tmux'
+
+# Set the prompt.
+# https://github.com/sindresorhus/pure
+if [ -d ~/.zsh/pure ]; then
+  fpath+=~/.zsh/pure
+  autoload -U promptinit
+  promptinit
+  prompt pure
+fi
+
+# Show the greeting message.
+clear
+[ -z $TMUX ] && cowsay -s 'Happy coding!'
 
 # Enable command completion.
 autoload -Uz compinit
@@ -39,20 +51,7 @@ bindkey -v
 bindkey '^?' backward-delete-char
 export KEYTIMEOUT=1
 
-# Set the prompt.
-# https://github.com/sindresorhus/pure
-if [ -d ~/.zsh/pure ]; then
-  fpath+=~/.zsh/pure
-  autoload -U promptinit
-  promptinit
-  prompt pure
-fi
-
-# Show the greeting message.
-clear
-[ -z $TMUX ] && cowsay -s 'Happy coding!'
-
-# Load fzf bindings & completions.
+# Enable fzf key bindings.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Enable fish-like syntax highlighting for zsh.
@@ -69,3 +68,5 @@ if [ -d ~/.zsh/zsh-autosuggestions ]; then
 fi
 
 [ -f ~/.zsh/extras.sh ] && source ~/.zsh/extras.sh
+
+eval "$(mise activate zsh)"
