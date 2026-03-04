@@ -1,18 +1,17 @@
-# Let files beginning with a . be matched without explicitly specifying the dot
+# Let files beginning with a . be matched without explicitly specifying the dot.
 setopt globdots
 
-# Unbind \C-s and \C-q
+# Unbind \C-s and \C-q.
 setopt noflowcontrol
 
 # If a new command line being added to the history list duplicates an older
-# one, the older command is removed from the list
+# one, the older command is removed from the list.
 setopt HIST_IGNORE_ALL_DUPS
 
 export PATH="./node_modules/.bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=hx
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export PROJECTS="$HOME/Projects"
 
 alias ..='cd ..'
@@ -22,7 +21,7 @@ alias c='clear'
 alias g='git'
 alias t='tmux'
 
-# Enable command completion
+# Enable command completion.
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu yes select
@@ -33,12 +32,12 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-# Enable vi mode
+# Enable vi mode.
 bindkey -v
 bindkey '^?' backward-delete-char
 export KEYTIMEOUT=1
 
-# Set the prompt
+# Set the prompt.
 # https://github.com/sindresorhus/pure
 if [ -d ~/.zsh/pure ]; then
   fpath+=~/.zsh/pure
@@ -47,20 +46,20 @@ if [ -d ~/.zsh/pure ]; then
   prompt pure
 fi
 
-# Show the greeting message
+# Show the greeting message.
 clear
 [ -z $TMUX ] && cowsay -s 'Happy coding!'
 
-# Load fzf bindings & completions
+# Load fzf bindings & completions.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Enable fish-like syntax highlighting for zsh
+# Enable fish-like syntax highlighting for zsh.
 # https://github.com/zsh-users/zsh-syntax-highlighting
 if [ -d ~/.zsh/zsh-syntax-highlighting ]; then
   source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-# Enable fish-like autosuggestions for zsh
+# Enable fish-like autosuggestions for zsh.
 # https://github.com/zsh-users/zsh-autosuggestions
 if [ -d ~/.zsh/zsh-autosuggestions ]; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
