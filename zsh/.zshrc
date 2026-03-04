@@ -1,3 +1,5 @@
+eval "$(mise activate zsh)"
+
 # Let files beginning with a . be matched without explicitly specifying the dot.
 setopt globdots
 
