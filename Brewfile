@@ -2,6 +2,7 @@ brew "cowsay"
 brew "eza"
 brew "fzf" # $(brew --prefix)/opt/fzf/install
 brew "git"
+brew "gum"
 brew "htop"
 brew "jq"
 brew "mise"
